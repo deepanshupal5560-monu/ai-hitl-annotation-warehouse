@@ -1,0 +1,20 @@
+{
+  "pipeline_name": "HITL_Audio_Annotation_Warehouse_ETL",
+  "database_path": "data/annotation_warehouse.db",
+  "dlq_export_path": "data/dead_letter_queue.csv",
+  "log_file_path": "logs/warehouse_etl.log",
+  "gemini_model": "gemini-2.5-flash",
+  "quality_thresholds": {
+    "min_confidence_score": 0.82,
+    "max_ai_disagreement_delta": 0.25,
+    "min_audio_duration_sec": 0.5,
+    "max_audio_duration_sec": 300.0
+  },
+  "approved_taxonomy": [
+    "speech_clear",
+    "alert_cough",
+    "alert_fall",
+    "background_noise",
+    "silence"
+  ]
+}
